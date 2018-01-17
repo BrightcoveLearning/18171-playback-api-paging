@@ -50,12 +50,10 @@ videojs.registerPlugin('playbackPaging', function () {
       for (var i = 0; i < limitValue; i++) {
         mediaData.videos[i] = myPlayer.catalog.transformVideoResponse(mediaData.videos[i], myPlayer);
       }
-      console.log("mediaData= ", mediaData);
       // Load the first video of the current playlist to the player
       myPlayer.catalog.load(mediaData.videos[0]);
       // Add the newest videos list to the playlist
       myPlayer.playlist(mediaData.videos);
-      console.log("playlist= ", myPlayer.playlist);
     });
   }
 
@@ -70,7 +68,7 @@ videojs.registerPlugin('playbackPaging', function () {
     eApiRequest.innerHTML = requestURL;
     return requestURL;
   }
-  
+
   /**
    * Request data from the Playback API
    */
