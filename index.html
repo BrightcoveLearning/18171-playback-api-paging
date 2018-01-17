@@ -46,10 +46,12 @@
   <div class="vjs-playlist"></div>
   <!-- Button to advance the videos in the playlist -->
   <input id="nextButton" type="button" value="Next Videos">
+
   <!-- Optional: display the API request with the limit and offset parameters -->
   <h3>Playback API request:</h3>
   <pre class="line-numbers">
 <code id="apiRequest" class="language-html" style="white-space: pre-line;">This text will be replaced</code></pre>
+
   <script type="text/javascript">
     var myPlayer,
       requestData,
@@ -68,6 +70,7 @@
       // Optional: get a reference to the API request display element
       eApiRequest = document.getElementById("apiRequest"),
       playlistLength;
+
     videojs("myPlayerID").ready(function () {
       // Get a reference to the player
       myPlayer = this;
@@ -109,6 +112,7 @@
         console.log("playlist= ", myPlayer.playlist);
       });
     }
+
     /**
      * Set up the data for the API request
      */
@@ -120,6 +124,7 @@
       eApiRequest.innerHTML = requestURL;
       return requestURL;
     }
+    
     /**
      * Request data from the Playback API
      */
