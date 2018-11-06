@@ -17,7 +17,7 @@ videojs.registerPlugin('playbackPaging', function () {
     eApiRequest = document.getElementById("apiRequest"),
     playlistLength;
 
-  videojs("myPlayerID").ready(function () {
+  videojs.getPlayer('myPlayerID').ready(function() {
     // Get a reference to the player
     myPlayer = this;
     // Use the catalog library to get the playlist object
